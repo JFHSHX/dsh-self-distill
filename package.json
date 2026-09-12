@@ -35,6 +35,10 @@
   ],
   "author": "JFHSHX",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JFHSHX/dsh-self-distill.git"
+  },
   "engines": {
     "node": ">=22.15"
   },
