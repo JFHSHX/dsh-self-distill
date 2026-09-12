@@ -1,0 +1,16 @@
+# DeepSeek Harness profile layer for dsh-self-distill.
+#
+# `dsh plugin --profile <name> add @jfhshx/dsh-self-distill` installs this package into the
+# profile and — because package.json declares `dsh.bundle.patch` — appends this file to the
+# profile's ordered bundle list. Nothing else needs editing.
+#
+# The row below mounts on the host plane, where the session-start / turn-stopping / disposed
+# events and the layered tools registry all reach every session.
+#
+# To turn it off for one profile without uninstalling, patch this row:
+#
+#   - id: self-distill
+#     disabled: true
+- insert:
+    - id: self-distill
+      name: "@jfhshx/dsh-self-distill/dsh"

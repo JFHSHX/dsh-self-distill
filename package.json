@@ -1,0 +1,46 @@
+{
+  "name": "@jfhshx/dsh-self-distill",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 插件：空闲时自动把本机全部 DSH 会话记录解压、蒸馏、脱敏为个人档案与日程（默认输出 C:\\myself）",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "dsh-self-distill": "bin/dsh-self-distill.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./dsh": "./src/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "bin",
+    "test",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "self-distill",
+    "session-log",
+    "schedule",
+    "redact",
+    "privacy"
+  ],
+  "author": "JFHSHX",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.15"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
